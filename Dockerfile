@@ -23,7 +23,7 @@ FROM alpine:latest as Final
 COPY --from=BuildBase /usr/bin/chktex /usr/bin/chktex
 
 # Install initial texlive environment
-RUN apk add texlive-full
+RUN apk add texlive-full biber
 
 # Install prebuilt deps
 RUN apk add python3 py3-pip
